@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+  <information>
+    <name>0xREVERSE</name>
+    <version>1.0.2</version>
+    <description><![CDATA[리버스 엔지니어링 / 해커 터미널 컨셉의 다크 티스토리 스킨. CRT 스캔라인, 디스어셈블리 스타일 글 목록, 스택 프레임 댓글.]]></description>
+    <license><![CDATA[MIT License]]></license>
+  </information>
+  <author>
+    <name>KimJeju</name>
+    <homepage>https://github.com/KimJeju</homepage>
+    <email>kimjeju9703@gmail.com</email>
+  </author>
+  <default>
+    <recentEntries>8</recentEntries>
+    <recentComments>5</recentComments>
+    <recentTrackbacks>5</recentTrackbacks>
+    <itemsOnGuestbook>10</itemsOnGuestbook>
+    <tagsInCloud>40</tagsInCloud>
+    <sortInCloud>3</sortInCloud>
+    <expandComment>1</expandComment>
+    <expandTrackback>0</expandTrackback>
+    <lengthOfRecentNotice>30</lengthOfRecentNotice>
+    <lengthOfRecentEntry>30</lengthOfRecentEntry>
+    <lengthOfRecentComment>30</lengthOfRecentComment>
+    <lengthOfRecentTrackback>30</lengthOfRecentTrackback>
+    <lengthOfLink>30</lengthOfLink>
+    <showListOnCategory>1</showListOnCategory>
+    <showListOnArchive>1</showListOnArchive>
+    <tree>
+      <color>9fb3a8</color>
+      <bgColor>0b0f0d</bgColor>
+      <activeColor>3dff88</activeColor>
+      <activeBgColor>101613</activeBgColor>
+      <labelLength>27</labelLength>
+      <showValue>1</showValue>
+    </tree>
+    <contentWidth>780</contentWidth>
+  </default>
+</skin>

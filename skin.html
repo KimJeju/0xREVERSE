@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[##_page_title_##]</title>
+<link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]">
+<link rel="stylesheet" href="./style.css">
+<s_t3></s_t3>
+</head>
+<body id="[##_body_id_##]">
+<div id="wrap">
+
+<!-- ============================================================ -->
+<!-- HEADER :: terminal window                                    -->
+<!-- ============================================================ -->
+<header id="hd">
+  <div class="term-bar">
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+    <span class="term-title">/usr/bin/blog — bash — 80x24</span>
+  </div>
+  <div class="hd-inner">
+    <p class="prompt-line">┌──(root㉿reverse)-[<span class="path">~/blog</span>]</p>
+    <h1 class="blog-title">
+      <span class="prompt">└─#</span>
+      <a href="[##_blog_link_##]">[##_title_##]</a><span class="cursor" aria-hidden="true">▮</span>
+    </h1>
+    <p class="blog-desc">; [##_desc_##]</p>
+    <p class="typeline"><span class="tl-prefix">[+]</span> <span id="typewriter"></span><span class="type-caret" aria-hidden="true">_</span></p>
+  </div>
+  <nav id="gnb">
+    <span class="nav-label">.plt&gt;</span>
+    [##_blog_menu_##]
+  </nav>
+</header>
+
+<div id="container">
+
+<!-- ============================================================ -->
+<!-- CONTENT                                                      -->
+<!-- ============================================================ -->
+<main id="content">
+
+[##_revenue_list_upper_##]
+
+<!-- 공지사항 -->
+<s_notice_rep>
+<article class="post-view notice">
+  <header class="post-head">
+    <p class="section-label">; section .notice — pinned</p>
+    <h2 class="post-title"><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h2>
+    <div class="post-meta"><span class="m-item">[##_notice_rep_date_##]</span></div>
+  </header>
+  <div class="article-body">[##_notice_rep_desc_##]</div>
+</article>
+</s_notice_rep>
+
+<!-- 보호글 -->
+<s_article_protected>
+<article class="post-view protected">
+  <p class="denied">[!] ACCESS DENIED — permission 0x000 (root required)</p>
+  <h2 class="post-title"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+  <div class="post-meta"><span class="m-item">[##_article_rep_date_##]</span></div>
+  <p class="protected-msg">보호되어 있는 글입니다. 비밀번호를 입력하면 복호화됩니다.</p>
+  <div class="protected-form">
+    <label for="[##_article_password_##]">passwd:</label>
+    <input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]" onkeydown="if (event.keyCode == 13) [##_article_dissolve_##]">
+    <button type="button" onclick="[##_article_dissolve_##]">./unlock</button>
+  </div>
+</article>
+</s_article_protected>
+
+<!-- 카테고리/검색/태그 목록 헤더 -->
+<s_list>
+<section class="list-wrap">
+  <header class="list-head">
+    <p class="section-label">; grep -rn "[##_list_conform_##]" ./blog</p>
+    <h2 class="list-title">'[##_list_conform_##]' <span class="list-count">— [##_list_count_##] hits</span></h2>
+  </header>
+  <ol class="list-items">
+    <s_list_rep>
+    <li>
+      <span class="li-date">[##_list_rep_regdate_##]</span>
+      <a class="li-title" href="[##_list_rep_link_##]">[##_list_rep_title_##]</a>
+      <span class="li-cnt">[[##_list_rep_rp_cnt_##]]</span>
+    </li>
+    </s_list_rep>
+  </ol>
+  <s_list_empty>
+  <p class="empty">[-] no match found — 0 rows returned</p>
+  </s_list_empty>
+</section>
+</s_list>
+
+<!-- 글 -->
+<s_article_rep>
+
+  <!-- 목록(홈)용 카드 : disassembly listing -->
+  <s_index_article_rep>
+  <article class="post-card">
+    <div class="card-gutter"><span class="addr">0x00400000</span></div>
+    <div class="card-body">
+      <div class="card-meta">
+        <a class="cat" href="[##_article_rep_category_link_##]">.[##_article_rep_category_##]</a>
+        <span class="date">[##_article_rep_simple_date_##]</span>
+        <s_rp_count><span class="rpcnt">rp=[##_article_rep_rp_cnt_##]</span></s_rp_count>
+      </div>
+      <h2 class="card-title"><a href="[##_article_rep_link_##]"><span class="kw">call</span> [##_article_rep_title_##]</a></h2>
+      <p class="card-summary">[##_article_rep_summary_##]</p>
+      <a class="card-more" href="[##_article_rep_link_##]">jmp read_more ›</a>
+    </div>
+    <s_article_rep_thumbnail>
+    <a class="card-thumb" href="[##_article_rep_link_##]"><img src="[##_article_rep_thumbnail_url_##]" alt=""></a>
+    </s_article_rep_thumbnail>
+  </article>
+  </s_index_article_rep>
+
+  <!-- 개별 글 페이지 -->
+  <s_permalink_article_rep>
+  <article class="post-view">
+    <header class="post-head">
+      <p class="section-label">; objdump -d — section .text</p>
+      <h2 class="post-title glitch" data-text="[##_article_rep_title_##]">[##_article_rep_title_##]</h2>
+      <div class="post-meta">
+        <span class="m-item"><a href="[##_article_rep_category_link_##]">.[##_article_rep_category_##]</a></span>
+        <span class="m-item">[##_article_rep_date_##]</span>
+        <span class="m-item">uid=[##_article_rep_author_##]</span>
+      </div>
+    </header>
+
+    <div class="article-body">
+    [##_article_rep_desc_##]
+    </div>
+
+    <s_tag_label>
+    <div class="post-tags"><span class="tags-label">.symtab&gt;</span> [##_tag_label_rep_##]</div>
+    </s_tag_label>
+
+    <s_ad_div>
+    <div class="admin-menu">
+      <a href="[##_s_ad_m_link_##]">[edit]</a>
+      <a href="#" onclick="[##_s_ad_d_onclick_##]">[rm&nbsp;-f]</a>
+    </div>
+    </s_ad_div>
+
+    <nav class="post-nav">
+      <s_article_prev>
+      <a class="pn prev" href="[##_article_prev_link_##]">
+        <span class="pn-label">&lt;- prev_block</span>
+        <span class="pn-title">[##_article_prev_title_##]</span>
+      </a>
+      </s_article_prev>
+      <s_article_next>
+      <a class="pn next" href="[##_article_next_link_##]">
+        <span class="pn-label">next_block -&gt;</span>
+        <span class="pn-title">[##_article_next_title_##]</span>
+      </a>
+      </s_article_next>
+    </nav>
+
+    <s_article_related>
+    <aside class="related">
+      <p class="section-label">; xrefs — 관련 글</p>
+      <ul>
+        <s_article_related_rep>
+        <li><a href="[##_article_related_rep_link_##]">[##_article_related_rep_title_##]</a> <span class="date">[##_article_related_rep_date_##]</span></li>
+        </s_article_related_rep>
+      </ul>
+    </aside>
+    </s_article_related>
+
+    <!-- 댓글 :: stack frames -->
+    <s_rp>
+    <section class="comments" id="comment">
+      <p class="section-label">; bt — <s_rp_count>[##_article_rep_rp_cnt_##] stack frames</s_rp_count></p>
+      <s_rp_container>
+      <ol class="comment-list">
+        <s_rp_rep>
+        <li id="[##_rp_rep_id_##]">
+          <div class="cmt [##_rp_rep_class_##]">
+            <span class="cmt-logo"><img src="[##_rp_rep_logo_##]" alt="" loading="lazy"></span>
+            <div class="cmt-main">
+              <div class="cmt-head">
+                <span class="cmt-name">[##_rp_rep_name_##]</span>
+                <span class="cmt-date">[##_rp_rep_date_##]</span>
+                <span class="cmt-ctrl">
+                  <a href="[##_rp_rep_link_##]" title="댓글 주소">#</a>
+                  <a href="#" onclick="[##_rp_rep_onclick_delete_##]">mod</a>
+                  <a href="#" onclick="[##_rp_rep_onclick_reply_##]">re:</a>
+                </span>
+              </div>
+              <p class="cmt-desc">[##_rp_rep_desc_##]</p>
+            </div>
+          </div>
+          <s_rp2_container>
+          <ul class="comment-reply">
+            <s_rp2_rep>
+            <li id="[##_rp_rep_id_##]">
+              <div class="cmt reply [##_rp_rep_class_##]">
+                <span class="cmt-logo"><img src="[##_rp_rep_logo_##]" alt="" loading="lazy"></span>
+                <div class="cmt-main">
+                  <div class="cmt-head">
+                    <span class="cmt-name">[##_rp_rep_name_##]</span>
+                    <span class="cmt-date">[##_rp_rep_date_##]</span>
+                    <span class="cmt-ctrl">
+                      <a href="[##_rp_rep_link_##]" title="댓글 주소">#</a>
+                      <a href="#" onclick="[##_rp_rep_onclick_delete_##]">mod</a>
+                    </span>
+                  </div>
+                  <p class="cmt-desc">[##_rp_rep_desc_##]</p>
+                </div>
+              </div>
+            </li>
+            </s_rp2_rep>
+          </ul>
+          </s_rp2_container>
+        </li>
+        </s_rp_rep>
+      </ol>
+      </s_rp_container>
+
+      <s_rp_input_form>
+      <div class="comment-form">
+        <p class="form-label">$ echo "comment" &gt;&gt; /dev/blog</p>
+        <s_rp_member>
+        <s_rp_guest>
+        <div class="form-row">
+          <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" placeholder="name">
+          <input type="password" maxlength="8" name="[##_rp_input_password_##]" placeholder="passwd">
+          <input type="text" name="[##_rp_input_homepage_##]" value="[##_guest_homepage_##]" placeholder="https://">
+        </div>
+        </s_rp_guest>
+        <label class="secret"><input type="checkbox" name="[##_rp_input_is_secret_##]"> --secret</label>
+        </s_rp_member>
+        <textarea name="[##_rp_input_comment_##]" rows="6" placeholder="// 댓글을 남겨주세요"></textarea>
+        <div class="form-submit">
+          <button type="button" onclick="[##_rp_onclick_submit_##]">push comment</button>
+        </div>
+      </div>
+      </s_rp_input_form>
+    </section>
+    </s_rp>
+
+  </article>
+  </s_permalink_article_rep>
+
+</s_article_rep>
+
+<!-- 방명록 -->
+<s_guest>
+<section class="guestbook">
+  <header class="post-head">
+    <p class="section-label">; cat /dev/guestbook</p>
+    <h2 class="post-title">방명록</h2>
+  </header>
+
+  <s_guest_input_form>
+  <div class="comment-form">
+    <p class="form-label">$ echo "hello" &gt;&gt; /dev/guestbook</p>
+    <s_guest_member>
+    <s_guest_form>
+    <div class="form-row">
+      <input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" placeholder="name">
+      <input type="password" maxlength="8" name="[##_guest_input_password_##]" placeholder="passwd">
+      <input type="text" name="[##_guest_input_homepage_##]" value="[##_guest_homepage_##]" placeholder="https://">
+    </div>
+    </s_guest_form>
+    </s_guest_member>
+    <textarea name="[##_guest_textarea_body_##]" rows="6" placeholder="// 방명록을 남겨주세요"></textarea>
+    <div class="form-submit">
+      <button type="button" onclick="[##_guest_onclick_submit_##]">push</button>
+    </div>
+  </div>
+  </s_guest_input_form>
+
+  <s_guest_container>
+  <ol class="comment-list guest-list">
+    <s_guest_rep>
+    <li id="[##_guest_rep_id_##]">
+      <div class="cmt [##_guest_rep_class_##]">
+        <span class="cmt-logo"><img src="[##_guest_rep_logo_##]" alt="" loading="lazy"></span>
+        <div class="cmt-main">
+          <div class="cmt-head">
+            <span class="cmt-name">[##_guest_rep_name_##]</span>
+            <span class="cmt-date">[##_guest_rep_date_##]</span>
+            <span class="cmt-ctrl">
+              <a href="#" onclick="[##_guest_rep_onclick_delete_##]">mod</a>
+              <a href="#" onclick="[##_guest_rep_onclick_reply_##]">re:</a>
+            </span>
+          </div>
+          <p class="cmt-desc">[##_guest_rep_desc_##]</p>
+        </div>
+      </div>
+      <s_guest_reply_container>
+      <ul class="comment-reply">
+        <s_guest_reply_rep>
+        <li id="[##_guest_rep_id_##]">
+          <div class="cmt reply [##_guest_rep_class_##]">
+            <span class="cmt-logo"><img src="[##_guest_rep_logo_##]" alt="" loading="lazy"></span>
+            <div class="cmt-main">
+              <div class="cmt-head">
+                <span class="cmt-name">[##_guest_rep_name_##]</span>
+                <span class="cmt-date">[##_guest_rep_date_##]</span>
+                <span class="cmt-ctrl"><a href="#" onclick="[##_guest_rep_onclick_delete_##]">mod</a></span>
+              </div>
+              <p class="cmt-desc">[##_guest_rep_desc_##]</p>
+            </div>
+          </div>
+        </li>
+        </s_guest_reply_rep>
+      </ul>
+      </s_guest_reply_container>
+    </li>
+    </s_guest_rep>
+  </ol>
+  </s_guest_container>
+</section>
+</s_guest>
+
+<!-- 태그 클라우드 -->
+<s_tag>
+<section class="taglog">
+  <header class="post-head">
+    <p class="section-label">; nm --defined-only blog.bin</p>
+    <h2 class="post-title">태그</h2>
+  </header>
+  <ul class="tag-cloud">
+    <s_tag_rep>
+    <li><a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a></li>
+    </s_tag_rep>
+  </ul>
+</section>
+</s_tag>
+
+<!-- 페이징 -->
+<s_paging>
+<nav class="paging">
+  <a [##_prev_page_##] class="pg-btn [##_no_more_prev_##]">&lt;&lt; prev</a>
+  <span class="numbox">
+    <s_paging_rep>
+    <a [##_paging_rep_link_##] class="num">0x[##_paging_rep_link_num_##]</a>
+    </s_paging_rep>
+  </span>
+  <a [##_next_page_##] class="pg-btn [##_no_more_next_##]">next &gt;&gt;</a>
+</nav>
+</s_paging>
+
+[##_revenue_list_lower_##]
+
+</main>
+
+<!-- ============================================================ -->
+<!-- SIDEBAR                                                      -->
+<!-- ============================================================ -->
+<aside id="sidebar">
+<s_sidebar>
+
+  <s_sidebar_element>
+  <!-- 검색 -->
+  <div class="sb-mod sb-search">
+    <h3 class="sb-title">/proc/search</h3>
+    <s_search>
+    <div class="search-box">
+      <span class="search-prompt">$</span>
+      <input type="text" name="[##_search_name_##]" value="[##_search_text_##]" placeholder="grep -rn ..." onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }">
+      <button type="button" onclick="[##_search_onclick_submit_##]">go</button>
+    </div>
+    </s_search>
+  </div>
+  </s_sidebar_element>
+
+  <s_sidebar_element>
+  <!-- 카테고리 -->
+  <div class="sb-mod sb-category">
+    <h3 class="sb-title">readelf -S <span class="dim">// 카테고리</span></h3>
+    [##_category_##]
+  </div>
+  </s_sidebar_element>
+
+  <s_sidebar_element>
+  <!-- 최근 글 -->
+  <div class="sb-mod sb-recent">
+    <h3 class="sb-title">tail -f posts.log</h3>
+    <ul class="sb-list">
+      <s_rctps_rep>
+      <li>
+        <span class="marker">&gt;</span>
+        <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
+        <span class="cnt">[[##_rctps_rep_rp_cnt_##]]</span>
+      </li>
+      </s_rctps_rep>
+    </ul>
+  </div>
+  </s_sidebar_element>
+
+  <s_sidebar_element>
+  <!-- 최근 댓글 -->
+  <div class="sb-mod sb-rcomment">
+    <h3 class="sb-title">tail -f comments.log</h3>
+    <ul class="sb-list">
+      <s_rctrp_rep>
+      <li>
+        <span class="marker">&gt;</span>
+        <a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a>
+        <span class="who">— [##_rctrp_rep_name_##]</span>
+      </li>
+      </s_rctrp_rep>
+    </ul>
+  </div>
+  </s_sidebar_element>
+
+  <s_sidebar_element>
+  <!-- 카운터 -->
+  <div class="sb-mod sb-counter">
+    <h3 class="sb-title">/proc/stat</h3>
+    <ul class="counter">
+      <li><span class="k">total</span><span class="v">[##_count_total_##]</span></li>
+      <li><span class="k">today</span><span class="v accent">[##_count_today_##]</span></li>
+      <li><span class="k">yesterday</span><span class="v">[##_count_yesterday_##]</span></li>
+    </ul>
+  </div>
+  </s_sidebar_element>
+
+</s_sidebar>
+
+  <!-- whoami :: 외부 링크 (사이드바 설정과 무관하게 항상 노출) -->
+  <div class="sb-mod sb-whoami">
+    <h3 class="sb-title">whoami</h3>
+    <ul class="whoami-list">
+      <li>
+        <span class="marker">&gt;</span>
+        <a href="https://github.com/KimJeju" target="_blank" rel="noopener">github.com/KimJeju</a>
+      </li>
+    </ul>
+  </div>
+
+</aside>
+
+</div><!-- /container -->
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                       -->
+<!-- ============================================================ -->
+<footer id="ft">
+  <p class="ft-line">
+    <span class="prompt">root@reverse:~#</span> shutdown -h now
+  </p>
+  <p class="ft-info">
+    &copy; <a href="[##_blog_link_##]">[##_title_##]</a>
+    · <a href="[##_rss_url_##]">rss</a>
+    · <a href="[##_guestbook_link_##]">guestbook</a>
+    · <a href="[##_taglog_link_##]">tags</a>
+    · <a href="https://github.com/KimJeju" target="_blank" rel="noopener">github</a>
+    · skin: <span class="skin-name">0xREVERSE</span>
+  </p>
+</footer>
+
+</div><!-- /wrap -->
+<script src="./images/script.js"></script>
+</body>
+</html>
