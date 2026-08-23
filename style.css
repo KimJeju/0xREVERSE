@@ -319,11 +319,13 @@ input, textarea { font-family: var(--mono); }
   border-radius: 6px;
   padding: 12px 16px;
   background: var(--bg-deep);
+  min-width: 0;      /* allow grid/flex item to shrink so long titles truncate */
+  overflow: hidden;
 }
 .pn:hover { border-color: var(--green-dim); text-shadow: none; }
 .pn.next { text-align: right; }
 .pn-label { font-size: .72rem; color: var(--text-dim); }
-.pn-title { font-size: .86rem; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pn-title { max-width: 100%; font-size: .86rem; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pn:hover .pn-title { color: var(--green); }
 
 /* related */
