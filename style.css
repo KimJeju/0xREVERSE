@@ -644,3 +644,6 @@ input, textarea { font-family: var(--mono); }
   .cursor, .type-caret, .denied { animation: none; }
   .glitch:hover::before, .glitch:hover::after { display: none; }
 }
+
+/* section-label overflow fix (mobile) */
+.section-label { overflow-wrap: anywhere; word-break: break-all; }
