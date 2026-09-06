@@ -6,14 +6,17 @@
 
 CRT 스캔라인 · 디스어셈블리 스타일 글 목록 · gdb 스택 프레임 댓글
 
-![preview](preview1600.jpg)
+[**▶ 라이브 데모**](https://176cm-developer.tistory.com) &nbsp;·&nbsp;
+[**⬇ 다운로드**](https://github.com/KimJeju/0xREVERSE/releases/latest) &nbsp;·&nbsp;
+[**📖 설치 가이드**](https://176cm-developer.tistory.com/entry/%ED%8B%B0%EC%8A%A4%ED%86%A0%EB%A6%AC-%EC%8A%A4%ED%82%A8-%EA%B0%9C%EB%B0%9C%EC%9E%90%C2%B7%EB%B3%B4%EC%95%88-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%8B%A4%ED%81%AC-%EC%8A%A4%ED%82%A8-0xREVERSE-%EB%AC%B4%EB%A3%8C-%EB%B0%B0%ED%8F%AC)
+
+![preview](preview.gif)
 
 ![license](https://img.shields.io/badge/license-MIT-3dff88?style=flat-square)
 ![version](https://img.shields.io/badge/version-1.0.2-27ab5f?style=flat-square)
 ![platform](https://img.shields.io/badge/platform-Tistory-0b0f0d?style=flat-square)
 ![deps](https://img.shields.io/badge/dependencies-none-5ad1e6?style=flat-square)
-![responsive](https://img.shields.io/badge/responsive-yes-ffb454?style=flat-square)
-
+[![stars](https://img.shields.io/github/stars/KimJeju/0xREVERSE?style=flat-square&color=ffb454)](https://github.com/KimJeju/0xREVERSE/stargazers)
 ```
 ┌──(root㉿reverse)-[~/blog]
 └─# ./install 0xREVERSE.skin
